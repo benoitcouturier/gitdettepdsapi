@@ -49,7 +49,7 @@ public class Test extends HttpServlet {
 		int mois = mo.intValue();
 		
 		ControlerFreq controlerfreq=new ControlerFreq();
-		ArrayList<Frequentation> freq=controlerfreq.getAnnalyse(annee, mois);
+		ArrayList<Frequentation> freq=controlerfreq.getAnnalyseAPI(annee, mois);
 		request.setAttribute("freq", freq);
 		this.getServletContext().getRequestDispatcher("/WEB-INF/test.jsp").forward(request, response);
 	}
